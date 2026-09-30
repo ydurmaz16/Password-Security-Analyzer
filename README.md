@@ -1,4 +1,4 @@
-# 🔐 Password Security Analyzer
+# Password Security Analyzer
 
 A small, privacy-first web app that analyzes password strength and generates secure passwords. All processing happens **in the browser** — passwords are never sent, stored or logged.
 
@@ -59,37 +59,3 @@ The estimate assumes `average guesses = 2^entropy / 2` at **10^10 guesses/second
 - The input uses `autocomplete="off"` and `spellcheck="false"`.
 - The generator uses `crypto.getRandomValues` with rejection sampling (no modulo bias) and a Fisher-Yates shuffle.
 - Never test your real, in-use passwords in any online tool you don't fully trust.
-
-## Installation
-
-```bash
-git clone https://github.com/<your-username>/password-security-analyzer.git
-cd password-security-analyzer
-npm install
-```
-
-## Usage
-
-```bash
-npm run dev     # start dev server
-npm test        # run unit tests
-npm run build   # production build
-```
-
-Type a password and click **Analyze**, or use the generator to create a random password.
-
-## Screenshots
-
-![Password Security Analyzer](screenshot.png)
-
-## Future improvements
-
-- Optional FastAPI endpoint for breach checks via the HIBP k-anonymity API
-- Larger common-password list (e.g. top 10k) loaded lazily
-- Dictionary word segmentation and leetspeak detection
-- Passphrase (Diceware) generator
-- Dark/light theme toggle and i18n (TR/EN)
-
-## License
-
-MIT
